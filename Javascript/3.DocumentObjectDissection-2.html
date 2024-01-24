@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>DOM JS - CodingWithCharlie</title>
+  </head>
+  <style>
+    .myBox{
+      width: 250px;
+      height: 250px;
+      background-color: lightseagreen;
+    }
+  </style>
+  <body class="p-5">
+    <h1>Parte 3</h1>
+    <hr />
+    <main class="form-signin w-100 m-auto">
+      <form>
+        <div class="form-floating">
+          <input
+            type="email"
+            class="form-control"
+            id="emailField"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating" id="wrapperPass">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <div class="checkbox mb-3 mt-4">
+          <label>
+            <input type="checkbox" value="remember-me" /> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
+          Sign in
+        </button>
+      </form>
+      <hr>
+      <button class="w-100 btn btn-lg btn-primary" id="clickMe">
+        Click Me!
+      </button>
+      <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
+      <div class="myBox"></div>
+    </main>
+  </body>
+  <script>
+    console.log("Hey cracks!");
+    // const button = document.querySelector('#clickMe')
+    // button.className = ''
+    // button.className = 'w-25 btn btn-secondary'
+    // ----
+    // const button = document.querySelector('#clickMe')
+    // button.addEventListener('click', () => console.info('button Clicked!'))
+    // button.click()
+    // ----
+    // const box = document.querySelector('.myBox')
+    // console.log(box.clientWidth)
+    // console.log(box.clientHeight)
+    // ----
+    // const box = document.querySelector('.myBox')
+    // console.log(box.clientLeft)
+    // console.log(box.clientTop)
+    // ----
+    // const btnSubmit = document.querySelector('button[type="submit"]')
+    // const wrapper = document.querySelector('.myBox')
+    // const nodeCloned = btnSubmit.cloneNode(true)
+    // nodeCloned.className = 'w-100 btn btn-warning'
+    // wrapper.appendChild(nodeCloned)
+    // ----
+    // const node = document.querySelector('#wrapperPass')
+    // const closestTitle = node.closest('#clickMe')
+    // console.log(node)
+    // console.log(closestTitle)
+  </script>
+</html>
