@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container p-3">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div class="alert alert-primary w-100" role="alert" id="infoAlert">
+          Una alerta informativa aqui
+        </div>
+      </div>
+      <div class="col-3"></div>
+      <div class="col-12 d-flex justify-content-center gap-2">
+        <button type="button" id="changeInfoAlertContent" class="btn btn-primary">Cambiar texto</button>
+        <button type="button" id="changeInfoAlertStyle" class="btn btn-primary">Cambiar color</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center gap-2" id="containerClones">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Sunset landscape</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-center gap-2">
+        <button type="button" id="changeCardImgBtn" class="btn btn-primary">Cambiar imagen</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const infoAlert = document.querySelector('#infoAlert')
+    const changeTxtBtn = document.querySelector('#changeInfoAlertContent')
+    changeTxtBtn.addEventListener('click', () => {
+      infoAlert.textContent = 'Texto cambiado desde JS'
+    })
+
+    const changeStyleBtn = document.querySelector('#changeInfoAlertStyle')
+    changeStyleBtn.addEventListener('click', () => {
+      infoAlert.className = 'alert alert-info w-100'
+    })
+    
+    const changeImgBtn = document.querySelector('#changeCardImgBtn')
+    changeImgBtn.addEventListener('click', () => {
+      const imgCard = document.querySelector('.card img')
+      const cardText = document.querySelector('.card .card-title')
+      imgCard.setAttribute('src', 'https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&w=1200')
+      cardText.textContent = 'Island Landscape'
+    })
+  </script>
+</body>
+</html>
+<!--
+  NOTAS:
+
+  Cada representación del DOM es un NODO y de acuerdo a la
+  posición de cada uno, los podemos identificar de la siguiente manera:
+  
+  > Root Node (Nodo Raiz): Es el nodo principal, en el caso de HTML el nodo siempre es HTML.
+  > Child Node (Nodo hijo): Es un nodo que esta directamente dentro de otro nodo.
+  > Descendant node (Nodo Descendiente): Es aquel nodo que esta 1 nivel más abajo del nodo contenedor.
+  > Parent Node (Nodo Padre): Es aquel nodo que posee un nodo dentro del mismo.
+  > Sibling Nodes (Nodos hermanos): Son aquellos nodos que estan en el mismo nivel en 
+  el arbol del DOM.
+-->
